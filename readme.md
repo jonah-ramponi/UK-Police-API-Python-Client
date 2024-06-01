@@ -11,6 +11,8 @@ The UK Police API Client is a Python package that provides convenient access to 
 To install the UK Police API Client, simply use pip:
 
 ```
+git clone https://github.com/jonah-ramponi/UK-Police-API-Python-Client.git
+
 pip install -e . 
 ```
 
