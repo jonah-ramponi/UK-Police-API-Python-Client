@@ -13,7 +13,7 @@ To install the UK Police API Client, simply use pip:
 ```
 git clone https://github.com/jonah-ramponi/UK-Police-API-Python-Client.git
 
-pip install -e . 
+pip install . 
 ```
 
 ---
@@ -38,7 +38,7 @@ for crime in crimes:
     print(crime)
 ```
 
-Here are the other endpoints: 
+Here are the other methods: 
 
 ```
 forces = client.get_forces()
