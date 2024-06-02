@@ -38,6 +38,42 @@ for crime in crimes:
     print(crime)
 ```
 
+Here are the other endpoints: 
+
+```
+forces = client.get_forces()
+force_details = client.get_force_details(force_id)
+senior_officers = client.get_force_senior_officers(force_id)
+
+neighbourhoods = client.get_neighbourhoods_for_force(force_id)
+neighbourhood = client.get_specific_neighbourhood(force_id, neighbourhood_id)
+boundary = client.get_neighbourhood_boundary(force_id, neighbourhood_id)
+team = client.get_neighbourhood_team(force_id, neighbourhood_id)
+events = client.get_neighbourhood_events(force_id, neighbourhood_id)
+priorities = client.get_neighbourhood_priorities(force_id, neighbourhood_id)
+neighbourhood_info = client.locate_neighbourhood(coordinates)
+
+crimes = client.get_street_level_crimes(location, date)
+outcomes = client.get_street_level_outcomes(location, date)
+crimes = client.get_crimes_at_location(location, date)
+crimes = client.get_crimes_no_location(category, force, date)
+categories = client.get_crime_categories(date)
+last_updated_date = client.get_last_updated_date()
+outcomes = client.get_outcomes_for_crime(crime_id)
+
+searches = client.get_stop_and_searches_by_area(location, date)
+searches = client.get_stop_and_searches_by_location(location_id, date)
+searches = client.get_stops_no_location(force, date)
+searches = client.get_stops_by_force(force, date)
+```
+
+---
+
+**TODO:**
+- Integrating fuzzy matching / force id lookup
+- better input handling using pydantic
+- make client easier to use (create force object, then access things like .crimes or .location)
+
 ---
 
 **Features:**
